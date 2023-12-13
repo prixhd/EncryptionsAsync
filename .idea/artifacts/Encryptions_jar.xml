@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Encryptions:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Encryptions_jar</output-path>
+    <root id="archive" name="Encryptions.jar">
+      <element id="module-output" name="Encryptions" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/bcprov-jdk15to18-177.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
