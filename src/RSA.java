@@ -11,6 +11,7 @@ import java.security.*;
 import java.security.spec.EncodedKeySpec;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.X509EncodedKeySpec;
+import java.util.Arrays;
 import java.util.Base64;
 
 public class RSA {
@@ -44,7 +45,7 @@ public class RSA {
         privateKey = pair.getPrivate();
         publicKey = pair.getPublic();
 
-        return new String[]{String.valueOf(privateKey), String.valueOf(publicKey)};
+        return new String[]{Arrays.toString(privateKey.getEncoded()), Arrays.toString(publicKey.getEncoded())};
     }
 
     public static byte[] rsaEncrypted(String message) throws NoSuchAlgorithmException, IOException, InvalidKeySpecException, NoSuchPaddingException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException {

@@ -1,5 +1,6 @@
 import java.security.*;
 import java.security.spec.*;
+import java.util.Arrays;
 import java.util.Base64;
 
 public class ECDSA {
@@ -44,7 +45,7 @@ public class ECDSA {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return new String[]{encodedStrMessage, isVerifiedStr, String.valueOf(privateKey), String.valueOf(publicKey)};
+        return new String[]{encodedStrMessage, isVerifiedStr, Arrays.toString(privateKey.getEncoded()), Arrays.toString(publicKey.getEncoded())};
     }
 
     private static byte[] sign(String message, PrivateKey privateKey) throws Exception {

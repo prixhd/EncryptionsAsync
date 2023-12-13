@@ -1,4 +1,5 @@
 import java.security.*;
+import java.util.Arrays;
 import java.util.Base64;
 
 public class DSA {
@@ -36,7 +37,7 @@ public class DSA {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return new String[]{encodedStrMessage, isVerifiedStr, String.valueOf(privateKey), String.valueOf(publicKey)};
+        return new String[]{encodedStrMessage, isVerifiedStr, Arrays.toString(privateKey.getEncoded()), Arrays.toString(publicKey.getEncoded())};
     }
 
     private static byte[] sign(String message, PrivateKey privateKey) throws Exception {

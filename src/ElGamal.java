@@ -3,6 +3,7 @@ import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import javax.crypto.Cipher;
 import java.security.*;
 import java.security.spec.*;
+import java.util.Arrays;
 import java.util.Base64;
 
 public class ElGamal {
@@ -50,7 +51,7 @@ public class ElGamal {
             e.printStackTrace();
         }
 
-        return new String[]{encryptedStrBytes, decryptedStrMessage, String.valueOf(privateKey), String.valueOf(publicKey)};
+        return new String[]{encryptedStrBytes, decryptedStrMessage, Arrays.toString(privateKey.getEncoded()), Arrays.toString(publicKey.getEncoded())};
     }
 }
 
